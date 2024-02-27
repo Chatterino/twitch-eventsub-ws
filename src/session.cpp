@@ -6,7 +6,6 @@
 #include "twitch-eventsub-ws/payloads/session-welcome.hpp"
 
 #include <boost/asio.hpp>
-#include <boost/asio/experimental/awaitable_operators.hpp>
 #include <boost/beast/core.hpp>
 #include <boost/beast/ssl.hpp>
 #include <boost/beast/websocket.hpp>
