@@ -51,7 +51,7 @@ void fail(beast::error_code ec, char const *what)
 template <class T>
 std::optional<T> parsePayload(const boost::json::value &jv)
 {
-    auto result = try_value_to<T>(jv);
+    auto result = boost::json::try_value_to<T>(jv);
     if (!result.has_value())
     {
         fail(result.error(), "parsing payload");
@@ -218,7 +218,8 @@ boost::json::error_code handleMessage(std::unique_ptr<Listener> &listener,
                 "Payload root must contain a metadata field"};
         return boost::system::error_code{129, errorRootMustContainMetadata};
     }
-    auto metadataResult = try_value_to<messages::Metadata>(*metadataV);
+    auto metadataResult =
+        boost::json::try_value_to<messages::Metadata>(*metadataV);
     if (metadataResult.has_error())
     {
         // TODO: wrap error?
