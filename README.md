@@ -1,3 +1,7 @@
+# ARCHIVED
+
+We moved this project into the Chatterino repository - you can follow its development there.
+
 # twitch-eventsub-ws
 
 This library implements some of [Twitch's EventSub](https://dev.twitch.tv/docs/eventsub/) topics for use in [Chatterino 2](https://github.com/Chatterino/chatterino2)
